@@ -50,19 +50,57 @@
             
 
         }
+        .contact{
+            text-align: center;
+            padding-top: 10px;
+        }
+        .form{
+            background-color: rgb(8, 74, 107);
+            color: white;
+            border-radius: 20px;
+        }
+        .name {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: auto; 
+    width: fit-content; 
+    padding-bottom: 60px;
+}
+
+    input {
+    width: 300px; 
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    }
+    .submit {
+        background-color: white;
+        color: rgb(8, 74, 107);
+        border-radius: 15px;
+        border: none;
+        padding: 10px 20px;
+    }
+    .submit:hover {
+        background-color: whitesmoke;
+        color: rgb(8, 74, 107);
+    }
+
 
     </style>
 </head>
 <body>
-    <nav>
-        <div>
+    <nav >
+        <div class="tabs">
     <ul>
         
         <li><a href = "./About.html"><b>About</b></a></li>
         <li><a href = "./Projects.html"><b>Projects</b></a></li>
         <li><a href = "./Resume.html"><b>Resume</b></a></li>
     </ul>
-        </div>
+        </div class = "social">
 
 
             <a href="https://www.instagram.com/raghavarora_6/"><img src="Emblems/ig.png" style="width: 50px;height: 50px;"></a>
@@ -76,6 +114,44 @@
     <div class = "intro">
 
        <h1 class = "auto-type">Raghav Arora</h1>
+       <section id = "contact">
+
+  </div>
+  <section id = "contact">
+  <div class = "form">
+    <h2 class="contact">Contact Me!</h2>
+    <form>
+   
+    <div class="name">
+        <div>
+            <input type = "text" id = "fname" name = "fname" size = "30" placeholder="First Name" required>
+
+        </div>
+        <div>
+            <input type = "text" id = "lname" name = "lname" size = "30" placeholder="Last Name"required>
+
+        </div>
+        <div>
+            <input type = "text" id = "email" name = "email" size = "30" placeholder="Email Address"required>
+
+        </div>
+        <div>
+            <input type = "text" id = "phone" name = "phone" size = "30" placeholder="Phone number"required>
+
+        </div>
+        <div>
+            <input type = "text" id = "" name = "name" size = "30"placeholder="Message"required style="height: 100px; padding-top: 15px;">
+
+        </div>
+        <button type="submit" class="submit">Submit</button>
+
+
+    </div>
+
+
+    </section>
+
+
   </div>
 </body>
 </html>
