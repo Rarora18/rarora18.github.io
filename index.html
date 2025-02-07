@@ -70,12 +70,23 @@
     padding-bottom: 60px;
 }
 
-input {
+    input {
     width: 300px; 
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
+    }
+    .submit {
+        background-color: white;
+        color: rgb(8, 74, 107);
+        border-radius: 15px;
+        border: none;
+        padding: 10px 20px;
+    }
+    .submit:hover {
+        background-color: whitesmoke;
+        color: rgb(8, 74, 107);
+    }
 
 
     </style>
@@ -132,7 +143,7 @@ input {
             <input type = "text" id = "" name = "name" size = "30"placeholder="Message"required style="height: 100px; padding-top: 15px;">
 
         </div>
-        
+        <button type="submit" class="submit">Submit</button>
 
 
     </div>
