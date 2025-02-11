@@ -7,11 +7,12 @@
     <link rel="icon" type="image/png" href="favicon/homefav3.png">
     <style>
         body {
-            color:blue;
+            color:rgb(8, 74, 107);
             font-size: 20px;
             background-color: rgb(255, 255, 255);
             margin: 0px;
             padding: 0px;
+            font-family: 'Times New Roman', Times, serif
         }
         .intro {
             color: rgb(8, 74, 107);
@@ -59,7 +60,6 @@
         .form{
             background-color: rgb(8, 74, 107);
             color: white;
-            border-radius: 20px;
         }
         .name {
     display: flex;
@@ -129,9 +129,9 @@ html {
     gap: 30px; /* Space between image and text */
     max-width: 100%;
     margin: auto;
-    
+    background-color: whitesmoke;
     flex-direction: row; /* Ensures image is on the left and text is on the right */
-    border: solid 1px;
+    /* border: solid 1px; */
     
 }
 
@@ -139,7 +139,15 @@ html {
     flex: 1; /* Makes image take the remaining space */
     object-fit: cover;
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 30px;
+       
+}
+.about-img img {
+    width: 140%; /* Increase width (Try values like 100%, 120%, etc.) */
+    max-width: 500px; /* Increase max size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    object-position: 90% 100%;
     
 }
 
@@ -147,6 +155,7 @@ html {
     flex: 1; /* Makes text take the remaining space */
     object-fit: cover;
     text-align: left;
+    padding-right: 40px;
 }
 
     </style>
@@ -181,7 +190,7 @@ html {
 <section id = "about" class="about-cont">
     <!-- <div class="about-cont"> -->
     <div class="about-img">
-    <img src="raghav.jpeg" alt="Raghav Arora" style="width: 200px; height: 200px; border-radius: 50%; margin-top: 20px;">
+    <img src="raghav.jpeg" alt="Raghav Arora" style="width: 350px; height: 350px; border-radius: 50%; margin-top: 20px;">
     </div>
     <div class="about-text">
     <p><br><br><br><br>Hi, I’m Raghav Arora – part-time coding ninja, full-time coffee enthusiast. By day, I’m a computer science student trying to make sense of data structures (yes, AVL trees, I’m looking at you 👀), and by night, I’m dreaming of conquering the fintech world with my future groundbreaking app (name TBD, but it’ll definitely have a sleek logo).
