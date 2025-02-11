@@ -122,6 +122,32 @@ html {
     padding: 50px;
     text-align: center;
 }
+.about-cont {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 30px; /* Space between image and text */
+    max-width: 100%;
+    margin: auto;
+    
+    flex-direction: row; /* Ensures image is on the left and text is on the right */
+    border: solid 1px;
+    
+}
+
+.about-img{
+    flex: 1; /* Makes image take the remaining space */
+    object-fit: cover;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.about-text {
+    flex: 1; /* Makes text take the remaining space */
+    object-fit: cover;
+    text-align: left;
+}
 
     </style>
 </head>
@@ -152,10 +178,10 @@ html {
        <section id = "contact">
 
   </div>
-<section id = "about" class="section">
-    <div class="about-cont">
+<section id = "about" class="about-cont">
+    <!-- <div class="about-cont"> -->
     <div class="about-img">
-    <img src="raghav.jpeg" alt="Raghav Arora" style="width: 200px; height: 200px; border-radius: 50%; margin-top: 20px; position:">
+    <img src="raghav.jpeg" alt="Raghav Arora" style="width: 200px; height: 200px; border-radius: 50%; margin-top: 20px;">
     </div>
     <div class="about-text">
     <p><br><br><br><br>Hi, I’m Raghav Arora – part-time coding ninja, full-time coffee enthusiast. By day, I’m a computer science student trying to make sense of data structures (yes, AVL trees, I’m looking at you 👀), and by night, I’m dreaming of conquering the fintech world with my future groundbreaking app (name TBD, but it’ll definitely have a sleek logo).
@@ -172,7 +198,7 @@ html {
         <li><a href=https://www.rockstargames.com/games/vicecity>GTA: Vice City</a></li>
         </ul>
     </div>
-    </div>
+    <!-- </div> -->
 </section>
 <section id="projects" class="projects">
     <h2><br><br>Projects</h2>
