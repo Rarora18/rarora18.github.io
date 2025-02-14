@@ -48,6 +48,8 @@ ul li a:hover{
 .contact{
     text-align: center;
     padding-top: 10px;
+    margin: 0px;
+    
 }
 .form{
     background-color: rgb(8, 74, 107);
@@ -102,7 +104,7 @@ list-style-type: none;
 }
 
 .tabs ul li {
-margin: 0 15px; /* Adjust spacing */
+margin: 0 15px;
 }
 
 html {
@@ -110,7 +112,7 @@ scroll-behavior: smooth;
 }
 
 .section {
-height: 100vh; /* Adjust height for better scrolling */
+height: 100vh; 
 padding: 50px;
 text-align: center;
 }
@@ -118,33 +120,33 @@ text-align: center;
 display: flex; 
 align-items: center; 
 justify-content: center; 
-gap: 30px; /* Space between image and text */
+gap: 30px; 
 max-width: 100%;
 margin: auto;
 background-color: whitesmoke;
-flex-direction: row; /* Ensures image is on the left and text is on the right */
-/* border: solid 1px; */
+flex-direction: row; 
+padding: 1px 100px
 
 }
 
 .about-img{
-flex: 1; /* Makes image take the remaining space */
+flex: 1; 
 object-fit: cover;
 text-align: center;
 margin-bottom: 30px;
 
 }
 .about-img img {
-width: 140%; /* Increase width (Try values like 100%, 120%, etc.) */
-max-width: 500px; /* Increase max size */
-height: auto; /* Maintain aspect ratio */
+width: 140%; 
+max-width: 500px;
+height: auto; 
 border-radius: 50%;
 object-position: 90% 100%;
 
 }
 
 .about-text {
-flex: 1; /* Makes text take the remaining space */
+flex: 1; 
 object-fit: cover;
 text-align: left;
 padding-right: 40px;
