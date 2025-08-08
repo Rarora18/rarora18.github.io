@@ -13,27 +13,20 @@
 <body>
     <nav>
         <div class="tabs">
-    <ul>
-        
-        <li><a href = "#home"><b>Home</b></a></li>
-        <li><a href = "#about"><b>About</b></a></li>
-        <li><a href = "#vision"><b>Vision</b></a></li>
-        <li><a href = "#projects"><b>Projects</b></a></li>
-        <li><a href = "#contact"><b>Contact</b></a></li>
-    </ul>
-    </div>
-        </div class = "social">
-
-
-            <a href="https://www.instagram.com/raghavarora_6/"><img src="Emblems/ig.png" style="width: 50px;height: 50px;"></a>
-
-            <a href="https://www.linkedin.com/in/raghav-arora-38621424b/"><img src="Emblems/in.png" style="width: 50px;height: 50px;"></a>
-            <a href="https://github.com/Rarora18"><img src="Emblems/gh.png" style="width: 48px;height: 48px;"></a>
-            <a href="https://x.com/Raurarora"><img src="Emblems/x.png" style="width: 45px;height: 45px;"></a>            
-            <a href="https://www.facebook.com/profile.php?id=100094666456098"><img src="Emblems/fb.png" style="width: 45px;height: 45px;"></a>            
-            <a href="https://www.reddit.com/user/Raghav_-_/"><img src="Emblems/reddit.png" style="width: 50px;height: 50px; padding-top: 2px;"></a>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href = "#home"><b>Home</b></a></li>
+                <li><a href = "#about"><b>About</b></a></li>
+                <li><a href = "#vision"><b>Vision</b></a></li>
+                <li><a href = "#projects"><b>Projects</b></a></li>
+                <li><a href = "#contact"><b>Contact</b></a></li>
+            </ul>
         </div>
-        </nav>
+    </nav>
     <section id="home">
     <div class = "intro">
 
@@ -194,6 +187,17 @@
   <section id = "contact" class="form">
   <!-- <div class = "form"> -->
     <h2 class="contact">Contact Me!</h2>
+    
+    <!-- Social Media Links -->
+    <div class="social-links" style="text-align: center; margin-bottom: 30px;">
+        <a href="https://www.instagram.com/raghavarora_6/"><img src="Emblems/ig.png" style="width: 50px;height: 50px; margin: 0 10px;"></a>
+        <a href="https://www.linkedin.com/in/raghav-arora-38621424b/"><img src="Emblems/in.png" style="width: 50px;height: 50px; margin: 0 10px;"></a>
+        <a href="https://github.com/Rarora18"><img src="Emblems/gh.png" style="width: 48px;height: 48px; margin: 0 10px;"></a>
+        <a href="https://x.com/Raurarora"><img src="Emblems/x.png" style="width: 45px;height: 45px; margin: 0 10px;"></a>            
+        <a href="https://www.facebook.com/profile.php?id=100094666456098"><img src="Emblems/fb.png" style="width: 45px;height: 45px; margin: 0 10px;"></a>            
+        <a href="https://www.reddit.com/user/Raghav_-_/"><img src="Emblems/reddit.png" style="width: 50px;height: 50px; padding-top: 2px; margin: 0 10px;"></a>
+    </div>
+    
     <form>
  
     <div class="name">
@@ -227,5 +231,48 @@
 
 
   </div>
+
+  <script>
+    // Hamburger menu toggle functionality
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    function isMobile() {
+      return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    function toggleMenu() {
+      if (!isMobile()) return; // Only toggle on mobile
+      navMenu.classList.toggle('hidden');
+    }
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', toggleMenu);
+
+      // Close menu when clicking on a link (mobile only)
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!isMobile()) return;
+          navMenu.classList.add('hidden');
+        });
+      });
+
+      // Ensure menu is visible by default on mobile
+      window.addEventListener('load', () => {
+        if (isMobile()) {
+          navMenu.classList.remove('hidden');
+        }
+      });
+
+      // Handle resize between desktop and mobile
+      window.addEventListener('resize', () => {
+        if (!isMobile()) {
+          navMenu.classList.remove('hidden');
+        } else {
+          navMenu.classList.remove('hidden'); // Show by default on mobile
+        }
+      });
+    }
+  </script>
 </body>
 </html>
