@@ -1,4 +1,12 @@
 /* ====== Base Styles ====== */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
     color: rgb(8, 74, 107);
     font-size: 20px;
@@ -97,6 +105,8 @@ nav {
     z-index: 1000;
     display: flex;
     align-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .tabs {
@@ -340,7 +350,7 @@ html {
     nav {
         height: auto;
         min-height: 60px;
-        padding: 10px 20px;
+        padding: 10px 30px;
         overflow: visible;
         align-items: flex-start;
     }
@@ -348,14 +358,14 @@ html {
     .hamburger-menu {
         display: flex;
         position: absolute;
-        right: 10px;
+        right: 20px;
         top: 10px;
     }
 
     .hamburger-menu span {
-        width: 16px;
-        height: 1.5px;
-        margin: 1.5px 0;
+        width: 24px;
+        height: 2px;
+        margin: 2px 0;
     }
 
     .tabs {
@@ -441,17 +451,17 @@ html {
     }
     nav {
         font-size: 16px;
-        padding: 8px 15px;
+        padding: 8px 25px;
         min-height: 50px;
     }
     .hamburger-menu {
-        right: 8px;
+        right: 15px;
         top: 8px;
     }
     .hamburger-menu span {
-        width: 14px;
-        height: 1.2px;
-        margin: 1.2px 0;
+        width: 20px;
+        height: 1.8px;
+        margin: 1.8px 0;
     }
     .intro {
         font-size: 22px;
