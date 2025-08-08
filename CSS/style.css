@@ -428,6 +428,11 @@ html {
     .demo-video {
         max-width: 100%;
     }
+    
+    /* Reduce projects section padding on tablets */
+    .projects {
+        padding: 10px 40px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -462,5 +467,10 @@ html {
     }
     .project-title {
         font-size: 1.4em;
+    }
+    
+    /* Reduce projects section padding on mobile */
+    .projects {
+        padding: 10px 20px !important;
     }
 }
