@@ -236,6 +236,7 @@
     // Hamburger menu toggle functionality
     const hamburger = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.nav-menu');
+    let isMenuHidden = false; // Track menu state
 
     function isMobile() {
       return window.matchMedia('(max-width: 768px)').matches;
@@ -243,7 +244,12 @@
 
     function toggleMenu() {
       if (!isMobile()) return; // Only toggle on mobile
-      navMenu.classList.toggle('hidden');
+      isMenuHidden = !isMenuHidden;
+      if (isMenuHidden) {
+        navMenu.classList.add('hidden');
+      } else {
+        navMenu.classList.remove('hidden');
+      }
     }
 
     if (hamburger && navMenu) {
@@ -253,24 +259,37 @@
       document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
           if (!isMobile()) return;
+          isMenuHidden = true;
           navMenu.classList.add('hidden');
         });
       });
 
-      // Ensure menu is visible by default on mobile
+      // Ensure menu is visible by default on mobile (only on load)
       window.addEventListener('load', () => {
         if (isMobile()) {
+          isMenuHidden = false;
           navMenu.classList.remove('hidden');
         }
       });
 
-      // Handle resize between desktop and mobile
+      // Handle resize between desktop and mobile (but preserve mobile state)
+      let wasDesktop = !isMobile();
       window.addEventListener('resize', () => {
-        if (!isMobile()) {
+        const isNowMobile = isMobile();
+        const isNowDesktop = !isNowMobile;
+        
+        // Only reset if switching from mobile to desktop
+        if (wasDesktop && isNowMobile) {
+          // Switching to mobile - use default open state
+          isMenuHidden = false;
           navMenu.classList.remove('hidden');
-        } else {
-          navMenu.classList.remove('hidden'); // Show by default on mobile
+        } else if (!wasDesktop && isNowDesktop) {
+          // Switching to desktop - always show
+          navMenu.classList.remove('hidden');
         }
+        // Don't change anything if staying on mobile (preserve user choice)
+        
+        wasDesktop = isNowDesktop;
       });
     }
   </script>
